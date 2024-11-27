@@ -1,0 +1,50 @@
+<div class="barra">
+    <h3 class="sub">Lista de Festivos</h3>
+  </div>
+  <div>
+    <p class="content">
+      En este espacio, podrás descubrir los días festivos de un año específico.
+      Simplemente ingresa el año deseado en el recuadro a continuación y obtendrás
+      una lista completa de las festividades correspondientes. Esta herramienta es
+      ideal para planificar tus vacaciones o eventos importantes con anticipación.
+    </p>
+  </div>
+  <div>
+    <mat-form-field class="custom-label">
+      <mat-label class="date">Año</mat-label>
+      <input
+        matInput
+        type="number"
+        [(ngModel)]="yearIngresado"
+        required
+        min="0"
+        step="1"
+      />
+      <mat-error *ngIf="!esYearValido && yearIngresado !== null">
+        Por favor, ingrese un año válido (mayor que 0).
+      </mat-error>
+    </mat-form-field>
+  
+    <button
+      class="btn"
+      mat-stroked-button
+      color="primary"
+      (click)="listarPorYear()"
+    >
+      Listar
+    </button>
+  </div>
+  <div class="barra">
+    <h3 class="sub">Resultados</h3>
+  </div>
+  <div class="bb">
+    <ngx-datatable
+      class="dark"
+      [rows]="festivos"
+      [columns]="columnas"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      [rowHeight]="'auto'"
+      [columnMode]="modoColumna.force"
+    ></ngx-datatable>
+  </div>

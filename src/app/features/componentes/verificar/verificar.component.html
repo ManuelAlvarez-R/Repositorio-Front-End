@@ -1,0 +1,52 @@
+<div class="barra">
+    <h2 class="sub">Dias Festivos</h2>
+  </div>
+  
+  <div class="content">
+    Los días festivos son jornadas no laborables establecidas por ley para
+    conmemorar eventos religiosos, cívicos o históricos. En muchos países, como
+    Colombia, los festivos se dividen en religiosos (por tradición católica) y
+    cívicos, algunos de los cuales se trasladan al lunes más cercano según la Ley
+    Emiliani. En términos laborales, las personas que trabajan en festivos reciben
+    un recargo adicional del 75% sobre su salario por hora, además de su salario
+    habitual. Estos días no se consideran hábiles en procesos judiciales o
+    administrativos. <br /><br />
+    La Ley Emiliani (Ley 51 de 1983) regula los días festivos en Colombia,
+    trasladando algunos al lunes siguiente para crear puentes festivos. Sin
+    embargo, fechas de gran relevancia histórica, como el 20 de julio
+    (Independencia) y el 7 de agosto (Batalla de Boyacá), se mantienen en su día
+    original. Esta ley convirtió a Colombia en uno de los países con más festivos
+    al año.
+    <br />
+    <br />
+    Quieres ver si tu proximo cumpleaños es festivo? Verifica Abajo
+  </div>
+  
+  <div class="barra">
+    <h3 class="sub">Verificar si un dia es Festivo</h3>
+  </div>
+  
+  <div class="two">
+    <mat-form-field class="custom-label">
+      <mat-label class="date">Fecha</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        [(ngModel)]="fechaIngresada"
+        required
+      />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error class="error" *ngIf="!fechaIngresada">
+        Por favor, seleccione una fecha.
+      </mat-error>
+    </mat-form-field>
+    <button
+      class="btn"
+      mat-stroked-button
+      color="primary"
+      (click)="verificarFestivo()"
+    >
+      Verificar Festivo
+    </button>
+  </div>

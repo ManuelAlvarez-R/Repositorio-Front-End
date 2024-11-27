@@ -1,1 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.barra {
+  background-color: rgb(34, 40, 49);
+  border: 3px solid #303544;
+  text-align: center;
+  font-size: 90%;
+  height: 8%;
+  padding: 0.3%;
+}
+
+.sub {
+  text-align: center;
+  height: 10%;
+  font-size: 240%;
+  margin-top: 0.3%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: aliceblue;
+}
+
+.content {
+  padding: 1%;
+  text-align: justify;
+  font-size: 120%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.custom-label {
+  color: #243139;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  margin-top: -3%;
+  padding: 2%;
+}
+
+.date {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 120%;
+}
+
+.btn {
+  color: #000;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-transform: uppercase;
+  border-radius: 1%;
+  background-color: #d5e4e2;
+  margin-top: -1.6%;
+}
